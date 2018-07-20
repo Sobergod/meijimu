@@ -1,13 +1,59 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view class='banner'>
+  <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+      <swiper-item class="swiper-item">
+        <image src="{{item}}" class="slide-image" mode='scaleToFill' />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='menu-wrap'>
+  <view class='menu-item' bindtap='navToSchoolTap'>
+    <image src='/images/icon/icon_abs.png'></image>
+    <text>学校简介</text>
+  </view>
+  <view class='menu-item' bindtap='navToCourseTap'>
+    <image src='/images/icon/icon_lesson.png'></image>
+    <text>课程展示</text>
+  </view>
+  <view class='menu-item' bindtap='navToAuditionTap'>
+    <image src='/images/icon/icon_audition.png'></image>
+    <text>预约试听</text>
+  </view>
+  <view class='menu-item' bindtap='navToContactTap'>
+    <image src='/images/icon/icon_contact.png'></image>
+    <text>联系我们</text>
+  </view>
+</view>
+<view class='video-wrap'>
+  <video></video>
+</view>
+<view class='list'>
+  <view class='list-title'>
+    <text>中心展示</text>
+    <text>中心展示...</text>
+  </view>
+  <view class='list-wrap'>
+    <block wx:for="{{centerList}}" wx:key="{{item.index}}">
+      <view class='list_item'>
+        <image src="{{item.img==''?defaultImg:item.img}}" mode='widthFix'></image>
+        <text>{{item.title}}> </text>
+      </view>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+</view>
+<view class='list'>
+  <view class='list-title'>
+    <text>课程展示</text>
+    <text>课程展示...</text>
+  </view>
+  <view class='list-wrap'>
+    <block wx:for="{{lessonList}}" wx:key="{{item.index}}">
+      <view class='list_item'>
+        <image src="{{item.img==''?defaultImg:item.img}}" mode='widthFix'></image>
+        <text>{{item.title}}> </text>
+      </view>
+    </block>
   </view>
 </view>

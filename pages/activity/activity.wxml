@@ -1,0 +1,23 @@
+<!--pages/activity/activity.wxml-->
+<view class='banner'>
+  <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+      <swiper-item class="swiper-item">
+        <image src="{{item}}" class="slide-image" mode='scaleToFill' />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='wrap bg1'>
+  <view class='title'>美吉姆比赛</view>
+  <view class='list'>
+    <view class='list-wrap'>
+      <block wx:for="{{matchList}}" wx:key="{{item.index}}">
+        <view class='list_item'>
+          <image src="{{item.img==''?defaultImg:item.img}}" mode='widthFix'></image>
+          <text>{{item.title}}> </text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

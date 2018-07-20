@@ -1,12 +1,56 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/school/school",
+    "pages/activity/activity",
+    "pages/course/course",
+    "pages/detail/detail",
+    "pages/contact/contact",
+    "pages/audition/audition",
+    "pages/center/center",
+    "pages/course/coursedetail/coursedetail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00A0E9",
+    "navigationBarTitleText": "美吉姆英语早教",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#00A0E9",
+    "color": "black",
+    "selectedColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar/icon_bar1.png",
+        "selectedIconPath": "images/tabbar/icon_bar1.png"
+      },
+      {
+        "pagePath": "pages/school/school",
+        "text": "咨询",
+        "iconPath": "images/tabbar/icon_bar1.png",
+        "selectedIconPath": "images/tabbar/icon_bar1.png"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "text": "课程",
+        "iconPath": "images/tabbar/icon_bar2.png",
+        "selectedIconPath": "images/tabbar/icon_bar2.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活动",
+        "iconPath": "images/tabbar/icon_bar3.png",
+        "selectedIconPath": "images/tabbar/icon_bar3.png"
+      },
+      {
+        "pagePath": "pages/audition/audition",
+        "text": "预约",
+        "iconPath": "images/tabbar/icon_bar4.png",
+        "selectedIconPath": "images/tabbar/icon_bar4.png"
+      }
+    ]
   }
 }

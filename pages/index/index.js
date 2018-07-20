@@ -4,24 +4,83 @@ const app = getApp()
 
 Page({
   data: {
+    defaultImg: '/images/zanwu.png',
+    imgUrls: [
+      '/images/swiper1.png',
+      '/images/swiper1.png',
+      '/images/swiper1.png',
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    centerList: [{
+        img: "/images/list1.png",
+        title: "卫星校区",
+      },
+      {
+        img: "/images/list2.png",
+        title: "飞跃校区",
+      },
+      {
+        img: "/images/list3.png",
+        title: "中海Touch12街校区",
+      },
+      {
+        img: "/images/list4.png",
+        title: "欧亚新生活",
+      }
+    ],
+    lessonList: [{
+        img: "/images/list5.png",
+        title: "欢乐课",
+      },
+      {
+        img: "/images/list6.png",
+        title: "艺术课",
+      },
+      {
+        img: "/images/list7.png",
+        title: "音乐课",
+      },
+      {
+        img: "/images/list8.png",
+        title: "全明星",
+      }
+    ],
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
-  bindViewTap: function() {
+  navToSchoolTap: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '',
     })
   },
-  onLoad: function () {
+  navToCourseTap: function() {
+    wx.navigateTo({
+      url: '',
+    })
+  },
+  navToAuditionTap: function() {
+    wx.switchTab({
+      url: '/pages/audition/audition',
+    })
+  }, 
+  navToContactTap: function () {
+    wx.navigateTo({
+      url: '',
+    })
+  },
+  onLoad: function() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {

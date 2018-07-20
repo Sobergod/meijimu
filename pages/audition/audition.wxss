@@ -1,0 +1,40 @@
+/* pages/audition/audition.wxss */
+.inp-wrap {
+  display: flex;
+  align-items: center;
+  margin: 20rpx auto;
+  padding: 20rpx 40rpx;
+  width: 80%;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #666;
+}
+.inp-wrap input {
+  padding-left: 15px;
+}
+.picker-wrap {
+  width: 100%;
+}
+.picker {
+  display: flex;
+  height:1.4rem;
+  align-items: center;
+}
+.picker text {
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+.btn-wrap {
+  text-align: center;
+}
+.submit-btn {
+  display: inline-block;
+  margin-top: 20px;
+  width: 30%;
+  background: #34CC99;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  color: #eee;
+}
