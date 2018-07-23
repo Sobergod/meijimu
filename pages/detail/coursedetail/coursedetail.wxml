@@ -1,4 +1,4 @@
-<!--pages/center/center.wxml-->
+<!--pages/coursedetail/coursedetail.wxml-->
 <view class='banner'>
   <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
@@ -12,5 +12,8 @@
   {{title}}
 </view>
 <view wx:if="{{detail}}" class='detail-wrap'>
+  {{detail}}
+</view>
+<view wx:else class='detail-wrap'>
   {{detail}}
 </view>

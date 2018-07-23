@@ -9,8 +9,9 @@
   </swiper>
 </view>
 <view class='ad-wrap'>
-  <view class='ad-tips'>广告</view>
-  <swiper class='ad-swiper' indicator-dots="{{indicatorDots1}}" vertical="true" circular="true" autoplay="{{autoplay1}}" interval="{{interval1}}" duration="{{duration1}}">
+  <image src='/images/icon/audio.png'></image>
+  <view class='ad-tips'>公告</view>
+  <swiper class='ad-swiper' indicator-dots="{{indicatorDots1}}" vertical="true" circular="true" autoplay="{{autoplay1}}" interval="{{interval1}}" duration="{{duration1}}"  wx:key="{{imgUrls}}">
     <block wx:for="{{content}}">
       <swiper-item>
         <text>{{item}}</text>

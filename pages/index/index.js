@@ -5,6 +5,8 @@ const app = getApp()
 Page({
   data: {
     defaultImg: '/images/zanwu.png',
+    videoUrl: '',
+    poster: '/images/swiper1.png',
     imgUrls: [
       '/images/swiper1.png',
       '/images/swiper1.png',
@@ -56,25 +58,55 @@ Page({
   //事件处理函数
   navToSchoolTap: function() {
     wx.navigateTo({
-      url: '',
+      url: '/pages/school/school',
     })
   },
   navToCourseTap: function() {
     wx.navigateTo({
-      url: '',
+      url: '/pages/detail/detail',
     })
   },
   navToAuditionTap: function() {
     wx.switchTab({
       url: '/pages/audition/audition',
     })
-  }, 
-  navToContactTap: function () {
+  },
+  navToContactTap: function() {
     wx.navigateTo({
+      url: '/pages/contact/contact',
+    })
+  },
+  navToSchoolDetail: function(e) {
+    var title = e.currentTarget.dataset.title;
+    wx.navigateTo({
+      url: '/pages/detail/coursedetail/coursedetail?title=' + title,
+    })
+  },
+  navToCourseDetailTap: function(e) {
+    var title = e.currentTarget.dataset.title;
+    wx.navigateTo({
+      url: '/pages/detail/coursedetail/coursedetail?title=' + title,
+    })
+  },
+  getVideo: function() {
+    wx.request({
       url: '',
+      data: '',
+      header: {},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: res => {
+        that.setData({
+
+        })
+      },
+      fail: function(res) {},
+      complete: function(res) {},
     })
   },
   onLoad: function() {
+    this.getVideo();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

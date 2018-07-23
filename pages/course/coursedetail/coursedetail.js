@@ -21,11 +21,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.setNavigationBarTitle({
+      title: options.title
+    })
     this.setData({
       title:options.title,
+    });
+    this.getData(title);
+  },
+  getData: function (title) {
+    wx.request({
+      url: '',
+      data: {
+        // title: title
+      },
+      header: {},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: (res) => {
+
+      },
+      fail: function (res) { },
+      complete: function (res) { },
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

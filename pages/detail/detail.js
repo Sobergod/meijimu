@@ -19,36 +19,36 @@ Page({
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
     ],
     indicatorDots1: false,
-    autoplay1: false,
-    interval1: 5000,
+    autoplay1: true,
+    interval1: 2000,
     duration1: 1000,
     matchList: [{
-      img: "/images/list_ac1.png",
-      title: "欢动课"
-    },
-    {
-      img: "/images/list_ac2.png",
-      title: "艺术课"
-    },
-    {
-      img: "/images/list_ac3.png",
-      title: "音乐课"
-    },
-    {
-      img: "/images/list_ac4.png",
-      title: "全明星"
-    },
-    {
-      img: "/images/list_ac4.png",
-      title: "棒球课"
-    },
-    {
-      img: "/images/list_ac4.png",
-      title: "金字塔"
-    },
+        img: "/images/list_ac1.png",
+        title: "欢动课"
+      },
+      {
+        img: "/images/list_ac2.png",
+        title: "艺术课"
+      },
+      {
+        img: "/images/list_ac3.png",
+        title: "音乐课"
+      },
+      {
+        img: "/images/list_ac4.png",
+        title: "全明星"
+      },
+      {
+        img: "/images/list_ac4.png",
+        title: "棒球课"
+      },
+      {
+        img: "/images/list_ac4.png",
+        title: "金字塔"
+      },
     ]
   },
-  navToDetailTap: function (e) {
+  navToDetailTap: function(e) {
     // console.log(e);
     var title = e.currentTarget.dataset.title;
     wx.navigateTo({
@@ -58,56 +58,68 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function(options) {
+    this.getData()
   },
-
+  getData: function() {
+    wx.request({
+      url: '',
+      data: '',
+      header: {},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

@@ -1,1 +1,22 @@
 /* pages/school/school.wxss */
+
+.school_item {
+  margin: 20rpx 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.school_item image {
+  width: 35%;
+}
+.school-title {
+  padding: 15rpx;
+  width: 55%;
+  text-align: left;
+  font-size: 14px;
+  border: 2px solid #1C697C;
+  border-radius: 10px;
+  background: #fff;
+}

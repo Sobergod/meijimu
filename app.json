@@ -8,7 +8,10 @@
     "pages/contact/contact",
     "pages/audition/audition",
     "pages/center/center",
-    "pages/course/coursedetail/coursedetail"
+    "pages/zixun/zixun",
+    "pages/course/coursedetail/coursedetail",
+    "pages/detail/coursedetail/coursedetail",
+    "pages/activity/activitydetail/activitydetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,7 +31,7 @@
         "selectedIconPath": "images/tabbar/icon_bar1.png"
       },
       {
-        "pagePath": "pages/school/school",
+        "pagePath": "pages/zixun/zixun",
         "text": "咨询",
         "iconPath": "images/tabbar/icon_bar1.png",
         "selectedIconPath": "images/tabbar/icon_bar1.png"

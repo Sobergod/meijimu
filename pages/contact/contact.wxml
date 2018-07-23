@@ -1,2 +1,27 @@
 <!--pages/contact/contact.wxml-->
-<text>pages/contact/contact.wxml</text>
+<view class='banner'>
+  <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+      <swiper-item class="swiper-item">
+        <image src="{{item}}" class="slide-image" mode='scaleToFill' />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='wrap bg1'>
+  <view class='contact-list'>
+    <block wx:for="{{contactList}}" wx:key="">
+      <view class='contact-item'>
+        <view class='t1'>{{item.title1}}</view>
+        <view class='t2'>{{item.title2}}</view>
+        <view class='contact-img'>
+          <image src='{{item.img}}'></image>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='footer'>
+    <text>非会员预约体验电话:</text>
+    <text>0431-81100750</text>
+  </view>
+</view>

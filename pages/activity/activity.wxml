@@ -13,7 +13,7 @@
   <view class='list'>
     <view class='list-wrap'>
       <block wx:for="{{matchList}}" wx:key="{{item.index}}">
-        <view class='list_item'>
+        <view class='list_item' bindtap='navToactivityDetailTap' data-title='{{item.title}}'>
           <image src="{{item.img==''?defaultImg:item.img}}" mode='widthFix'></image>
           <text>{{item.title}}> </text>
         </view>

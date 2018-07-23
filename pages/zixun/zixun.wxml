@@ -1,0 +1,8 @@
+<!--pages/zixun/zixun.wxml-->
+<view class='wrap bg2'>
+  <view class='phone-wrap' bindtap='call'>
+    <text>联系我们:</text>
+    <text>{{phoneNumber}}</text>
+  </view>
+  <view class='tips'>tips:点击上方联系方式联系我们吧!</view>
+</view>

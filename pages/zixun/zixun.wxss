@@ -1,0 +1,26 @@
+/* pages/zixun/zixun.wxss */
+
+.wrap {
+  background-position: center;
+}
+
+.phone-wrap {
+  display: flex;
+  margin: 100px auto 10px auto;
+  padding: 20rpx;
+  width: 80%;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-size: 15px;
+  color: tomato;
+  font-weight: 800;
+}
+
+.tips {
+  padding: 20rpx;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: .2em;
+  background: rgba(255, 255, 255, 0.9);
+}

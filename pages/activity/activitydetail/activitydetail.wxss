@@ -1,0 +1,6 @@
+/* pages/center/center.wxss */
+
+.swiper {
+  height: 500rpx;
+}
+

@@ -14,3 +14,6 @@
 <view wx:if="{{detail}}" class='detail-wrap'>
   {{detail}}
 </view>
+<view wx:else class='detail-wrap'>
+  {{detail}}
+</view>
