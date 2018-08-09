@@ -4,14 +4,14 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.0",
+	"libVersion": "2.2.1",
 	"appid": "wxd6b38042a7934a23",
 	"projectname": "%E7%BE%8E%E5%90%89%E5%A7%86",
 	"isGameTourist": false,
@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -76,6 +76,17 @@
 					"name": "学校",
 					"pathName": "pages/school/school",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "123",
+					"pathName": "pages/audition/audition",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "123",
+					"pathName": "pages/course/coursedetail/coursedetail"
 				}
 			]
 		}

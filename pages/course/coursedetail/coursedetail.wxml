@@ -12,8 +12,10 @@
   {{title}}
 </view>
 <view wx:if="{{detail}}" class='detail-wrap'>
-  {{detail}}
+  <!-- {{detail}} -->
+  <rich-text nodes="{{detail}}"></rich-text>
 </view>
 <view wx:else class='detail-wrap'>
-  {{detail}}
+
 </view>
+

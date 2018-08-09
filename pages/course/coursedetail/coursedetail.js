@@ -13,85 +13,85 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    title:"加载中..",
-    detail: "美吉姆欢动课作为全球顶尖的儿童早期运动课程,帮助0-6岁的儿童促进其体能、认知、社交、情感等方面的全面发展。课程综合了精彩趣味的游戏、运动、体操、音乐、舞蹈、接力比赛、骑乘游戏等，在每周更新的结构性的适龄性课程中，孩子们在获得无限欢乐的同时，收获身体力量、平衡、协调、敏捷和灵活性的发展，进而发展社交能力，并树立良好的自信心和自尊心，构筑健康心智及人格，让儿童以更加积极的心态应对未来社会的挑战"
+    title: "加载中..",
+    detail: "",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     wx.setNavigationBarTitle({
       title: options.title
     })
     this.setData({
-      title:options.title,
+      title: options.title,
     });
-    this.getData(title);
+    this.getData();
   },
-  getData: function (title) {
+  getData: function() {
+    var that = this;
     wx.request({
-      url: '',
+      url: 'https://mjm.ccruitu.com/e/ajax.php?act=jiaoshijieshao&title=奇幻生日会',
       data: {
         // title: title
       },
-      header: {},
-      method: 'GET',
-      dataType: 'json',
-      responseType: 'text',
-      success: (res) => {
-
+      success: function(res) {
+        console.log(res);
+        that.setData({
+          detail: res.data.wenzi
+        })
       },
-      fail: function (res) { },
-      complete: function (res) { },
+      fail: function(res) {},
+      complete: function(res) {},
     })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-  
+  onShow: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-  
+  onHide: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-  
+  onUnload: function() {
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh: function() {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-  
+  onReachBottom: function() {
+
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function() {
+
   }
 })

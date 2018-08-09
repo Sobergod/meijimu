@@ -121,7 +121,7 @@
   padding: 20rpx 40rpx;
   color: #666;
   font-size: 15px;
-  text-indent: 2em;
+
   letter-spacing: 0.2em;
   line-height: 1.6em;
 }

@@ -21,38 +21,38 @@
   },
   "tabBar": {
     "backgroundColor": "#00A0E9",
-    "color": "black",
-    "selectedColor": "white",
+    "color": "#000000",
+    "selectedColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
         "iconPath": "images/tabbar/icon_bar1.png",
-        "selectedIconPath": "images/tabbar/icon_bar1.png"
+        "selectedIconPath": "images/tabbar/icon_bar1.png",
+        "text": "首页"
       },
       {
         "pagePath": "pages/zixun/zixun",
-        "text": "咨询",
         "iconPath": "images/tabbar/icon_bar1.png",
-        "selectedIconPath": "images/tabbar/icon_bar1.png"
+        "selectedIconPath": "images/tabbar/icon_bar1.png",
+        "text": "咨询"
       },
       {
         "pagePath": "pages/course/course",
-        "text": "课程",
         "iconPath": "images/tabbar/icon_bar2.png",
-        "selectedIconPath": "images/tabbar/icon_bar2.png"
+        "selectedIconPath": "images/tabbar/icon_bar2.png",
+        "text": "课程"
       },
       {
         "pagePath": "pages/activity/activity",
-        "text": "活动",
         "iconPath": "images/tabbar/icon_bar3.png",
-        "selectedIconPath": "images/tabbar/icon_bar3.png"
+        "selectedIconPath": "images/tabbar/icon_bar3.png",
+        "text": "活动"
       },
       {
         "pagePath": "pages/audition/audition",
-        "text": "预约",
         "iconPath": "images/tabbar/icon_bar4.png",
-        "selectedIconPath": "images/tabbar/icon_bar4.png"
+        "selectedIconPath": "images/tabbar/icon_bar4.png",
+        "text": "预约"
       }
     ]
   }
