@@ -12,26 +12,26 @@
 <view class='wrap bg2'>
   <form bindsubmit="formSubmit">
     <view class='inp-wrap'>
-      <text>宝宝姓名:</text>
-      <input placeholder='填写姓名' name='babyname'></input>
+      <text class='tt1'>宝宝姓名:</text>
+      <input class='tt2' placeholder='填写姓名' name='babyname'></input>
     </view>
     <view class='inp-wrap'>
       <picker class='picker-wrap' mode="date" value="{{date}}" start="{{dataStart}}" end="{{dataEnd}}" bindchange="bindDateChange" name="bath">
         <view class="picker">
-          <text>宝宝生日:</text>
-          <text>{{date}}</text>
+          <text class='tt1'>宝宝生日:</text>
+          <text class='tt2'>{{date}}</text>
         </view>
       </picker>
     </view>
     <view class='inp-wrap'>
-      <text>联系电话:</text>
-      <input placeholder='填写电话' name="phone" ></input>
+      <text class='tt1'>联系电话:</text>
+      <input class='tt2' placeholder='填写电话' name="phone"></input>
     </view>
     <view class='inp-wrap'>
       <picker class='picker-wrap' bindchange="bindPickerChange" value="{{school[index]}}" range="{{school}}" name="school">
         <view class="picker">
-          <text> 校区选择: </text>
-          <text>{{school[index]}}</text>
+          <text class='tt1'> 校区选择: </text>
+          <text class='tt2'>{{school[index]}}</text>
         </view>
       </picker>
     </view>
